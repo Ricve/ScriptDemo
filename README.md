@@ -1,2 +1,4 @@
 # ScriptDemo
-Some JavaScript Demos for Tampermonkey,auto js and so on.
+It's a repositories for saving some my JavaScript Demos.
+
+These JavaScript codes mostly used for Tampermonkey,auto js and so on.
