@@ -12,9 +12,12 @@
 (function() {
     'use strict';
     window.onload=function() {
-        const all=5120;
-        var s=document.getElementsByName('PageTips')[0].innerText;
-        var used=Number(s.slice(26,34));
+        const all=5120;//总流量
+        var s=document.getElementsByName('PageTips')[0].innerText;//获取字符串
+        var nums=s.match(/\d+\.\d+/g);//通过正则表达式提取字符串中的包含小数点的数字
+        /*该字符串中一共有三个数字：已用时间、已用流量、余额，一般只有已用流量包含小数*/
+        //var used=Number(s.slice(24,31));
+        var used=nums[0];
         var left=document.createElement('div')
         document.getElementsByName('PageTips')[0].children[6].append(left);
         left.innerText='剩余流量：'+(all-used).toFixed(3)+" MByte";
